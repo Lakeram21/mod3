@@ -1,0 +1,27 @@
+{%extends 'animebase.html'%}
+{%load static%}
+{%block content%}
+<h1 class="results">Results for Search</h1>
+<form class="searchbar" action="search">
+    <input type="text" name="result">
+    <input type="submit" value="SEARCH">
+</form>
+<div class="item_container">
+
+
+
+    {%for i in result%}
+
+    <div class="item">
+
+        <img class='posterLarge' src={{i.image_url}} alt="naruto image">
+        <h1 class="title">{{i.title}}</h1>
+        <h3 class="rating">{{i.rated}}</h3>
+
+        <!--<a href={{i.url}}>link text</a>-->
+        <p>{{i.synopsis}}</p>
+    </div>
+
+    {%endfor%}
+</div>
+{% endblock %}

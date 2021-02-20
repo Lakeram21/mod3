@@ -1,0 +1,23 @@
+{%extends 'animebase.html'%}
+
+{%load static%}
+
+{%block content%}
+<div>
+    <h2>Login</h2>
+    <form class='login' action="" method='post'>
+
+        {% csrf_token%}
+        Enter Name : <input type='text' name="username"><br>
+        Enter Email: <input type='text' name='email'><br>
+        Enter Password : <input type='password' name="num2"><br>
+        <input type="submit">
+    </form>
+    <div>
+        <h3>Don't have an account<a href="/signup">signup</a></li>
+        </h3>
+    </div>
+
+</div>
+
+{%endblock%}

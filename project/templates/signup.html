@@ -1,0 +1,23 @@
+{% extends 'animebase.html' %}
+
+{% load static %}
+
+{%block content%}
+
+<h1 class="ex">{{signup}}</h1>
+<div class="sign_container">
+
+    <form class="signup" action='' method="post">
+        <h1>SIGN UP</h1>
+        {% csrf_token%}
+        {{form}}
+        <input class="submitbutton" type="submit" value="Submit">
+        <p><b>If you already have an account....</b> <a href="#">Login</a></p>
+    </form>
+
+
+</div>
+
+
+
+{%endblock%}
